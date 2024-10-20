@@ -6,6 +6,8 @@ Deno + Postgres
 
 ## Run
 
+Duplicate the `.env.sample` file and rename the copy to `.env`. Then run the following command from the root of the project folder:
+
 ```bash
 deno run dev
 ```

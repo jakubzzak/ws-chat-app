@@ -6,6 +6,8 @@ Vite + pnpm + shadcn/ui + tailwind
 
 ## Run
 
+Duplicate `.env.sample` file and rename the copy to `.env`. Then run the following commands from the root of the project folder:
+
 ```bash
 pnpm install
 pnpm run dev
