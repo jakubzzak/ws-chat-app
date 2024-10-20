@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-env --watch main.ts",
+    "test": "deno test --allow-net --allow-read --allow-env",
+    "db:migrate": "deno task run-postgres && NODE_ENV=test npx knex migrate:latest --cwd src/services/postgres",
+    "run-postgres": "docker kill postgres || true && docker run --rm --name postgres -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:12.8-alpine"
+  },
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.1.0",
+    "@std/assert": "jsr:@std/assert@1",
+    "knex": "npm:knex@^3.1.0",
+    "pg": "npm:pg@^8.13.0"
+  }
+}
