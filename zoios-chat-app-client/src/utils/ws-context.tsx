@@ -111,10 +111,6 @@ const WebsocketProvider = ({ children, username }: Props) => {
     setIsConnected(ws.current?.readyState === w3cwebsocket.OPEN);
   }, [isConnected]);
 
-  useEffect(() => {
-    console.log("messages", messages);
-  }, [messages]);
-
   return (
     <WebsocketContext.Provider
       value={{
